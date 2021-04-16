@@ -77,4 +77,11 @@ class Database
     $this->execute();
     return $this->stmt->fetch(PDO::FETCH_ASSOC);
   }
+
+  //membuat fungsi menghitung hasil record yg dikembalikan bernama rowCount
+  //sedangkan pada $this->stmt-> method rowCount() merupakan milik dari PDO
+  public function rowCount()
+  {
+    return $this->stmt->rowcount();
+  }
 }
